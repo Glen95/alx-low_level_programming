@@ -1,30 +1,38 @@
 #include "main.h"
+
 /**
- * times_table - prints the multiples of 9 table
+ * times_table - prints the multipes of 9 table
+ * r = row, c = column, d = digit of current result
+ * return: times table
+ * add extra space past single digit
  */
 void times_table(void)
 {
-	int num, mult, prod;
+	int r, c, d;
 
-	for (num = 0; num <= 9; mult++)
+	for (r = 0; r <= 9; r++)
 	{
 		_putchar('0');
-
-		for (mult = 1; mult <= 9; mult++)
+		_putchar(',');
+		_putchar(' ');
+		for (c = 1; c <= 9; c++)
 		{
-			_putchar(',');
-			_putchar(' ');
-
-
-			prod = num * mult;
-
-			if (prod <= 9)
-				_putchar(' ');
+			d = (r * c);
+			if ((d / 10) > 0)
+			{
+				_putchar((d / 10) + '0');
+			}
 			else
-				_putchar ((prod / 10) + '0');
+			{
+				_putchar(' ');
+			}
+			_putchar((d % 10) + '0');
 
-			_putchar((prod % 10) + '0');
+			if (c < 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
-		_putchar('\n');
 	}
 }
