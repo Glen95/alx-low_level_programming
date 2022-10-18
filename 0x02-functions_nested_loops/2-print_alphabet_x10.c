@@ -6,7 +6,7 @@
 void print_alphabet_x10(void)
 {
 	int ten;
-	chat la;
+	char la;
 
 	for (ten = 0; ten <= 9; ten++)
 	{
