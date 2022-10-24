@@ -1,19 +1,23 @@
 #include "main.h"
 /**
  * print_rev - prints characters in reverse
- * @s: this is a parameter to change
+ * counter is to first count to end, n is to count back
+ * @s: str input
+ * Return: string in reverse
  */
 void print_rev(char *s)
 {
-	int i = 0;
+	int counter = 0;
+	int i, n;
 
-	while (s[i] != 0)
-		i++
-	i--;
-	while (i >= 0)
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		counter++;
+	}
+
+	for (n = (counter - 1); n >= 0; n--)
 	{
 		_putchar(s[i]);
-		i--;
 	}
 	_putchar('\n');
 }
