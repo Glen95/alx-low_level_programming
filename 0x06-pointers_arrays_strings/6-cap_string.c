@@ -5,26 +5,32 @@
  * @n: input string
  * Return: caps on first letter of a separator
  */
-char *cap_string(char *n)
+char *cap_string(char *s)
 {
-	int i = 0;
-	int j;
-	char badBoys[] = " \n\t,;.!?\"(){}";
+	int i, j;
+	int a[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	if (z[0] >= 'a' && z[0] <= 'z')
-		z[0] -= 32;
-
-	for (; z[i] != '\0'; i++)
+	i = 0;
+	while (*(s + i) != '\0')
 	{
-		for (j = 0; j < 14; j++)
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
 		{
-			if (z[i] == badBoys[j])
+			if (i == 0)
 			{
-				if (z[i + 1] >= 'a' && z[i + 1] <= 'z')
-					z[i + 1] -= 32;
+				*(s + i) = *(s + i) - 32;
+			}
+			else
+			{
+				for (j = 0; j <= 12; j++)
+				{
+					if (a[j] == *(s + i - 1))
+					{
+						*(s + i) = *(s + i) - 32;
+					}
+				}
 			}
 		}
+		i++;
 	}
-
-	return (z);
+	return (s);
 }
