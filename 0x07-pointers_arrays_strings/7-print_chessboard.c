@@ -3,7 +3,6 @@
 /**
  * print_chessboard - prints a chessboard
  * @a: pointer to matrix containing the chessboard
- * 
  * Return: nothing
  */
 void print_chessboard(char (*a)[8])
