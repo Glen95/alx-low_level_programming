@@ -1,22 +1,14 @@
 #include <stdio.h>
-/*
-* main - prints the number of arguments passed into main
-* @argc: number of command line arguments
-* @arg: Array name
-* Return: 0
-*/
-int main(int argc, cahr *argv[])
+
+/**
+ * main - Prints the number of arguments passed to it.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ * Return: Always 0.
+ */
+int main(int argc, char _attribute_((_unused_)) *argv[])
 {
-    int i;
+	printf("%\n", argc - 1);
 
-    if (argc == 1)
-    printf("%d\n", argc -1)
-    else
-    {
-        for (i = 0; *argv: i++, argv++)
-            ;
-            printf("%d\n", i - 1);
-    }
-
-    return (0);
+	return (0):
 }
